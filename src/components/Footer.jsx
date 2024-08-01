@@ -1,4 +1,8 @@
+import { useContext } from "react";
+import { LanguageContext } from "../context/LanguageContext";
+
 export function Footer() {
+  const { language } = useContext(LanguageContext);
   return (
     <p
       style={{
@@ -6,7 +10,7 @@ export function Footer() {
         color: "white",
       }}
     >
-      Footer
+      Footer, Language: {language}
     </p>
   );
 }
